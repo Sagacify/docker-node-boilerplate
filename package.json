@@ -1,0 +1,29 @@
+{
+  "name": "docker-node-boilerplate",
+  "version": "0.0.1",
+  "description": "Docker node boilerplate for Sagacify",
+  "main": "index.js",
+  "scripts": {
+    "test": "semistandard --verbose | snazzy",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sagacify/docker-node-boilerplate.git"
+  },
+  "author": "Louis Borsu <louis@sagacify.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sagacify/docker-node-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Sagacify/docker-node-boilerplate",
+  "dependencies": {
+    "bluebird": "^2.10.0",
+    "bunyan": "^1.5.1",
+    "config": "^1.16.0",
+    "redis": "^1.0.0",
+    "redis-lock": "^0.1.0",
+    "semistandard": "^7.0.2",
+    "snazzy": "^2.0.1"
+  }
+}

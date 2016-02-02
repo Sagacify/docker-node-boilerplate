@@ -1,0 +1,20 @@
+node:
+  build: .
+  command: npm start
+  environment:
+    NODE_ENV: development
+    APP_PORT: 3000
+  ports:
+    - "14290:3000"
+  volumes:
+    - ./src:/var/www/src
+    - ./config:/var/www/config
+    - ./package.json:/var/www/package.json
+    - ./index.js:/var/www/index.js
+    - ./.jscsrc:/var/www/.jscsrc
+    - ./.jshintrc:/var/www/.jshintrc
+    - ./.jshintignore:/var/www/.jshintignore
+  links:
+    - redis
+redis:
+  image: redis:2.8
