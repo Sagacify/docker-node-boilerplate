@@ -9,11 +9,10 @@ node:
   volumes:
     - ./src:/var/www/src
     - ./config:/var/www/config
+    - ./test:/var/www/test
+    - ./coverage:/var/www/covreporter
     - ./package.json:/var/www/package.json
     - ./index.js:/var/www/index.js
-    - ./.jscsrc:/var/www/.jscsrc
-    - ./.jshintrc:/var/www/.jshintrc
-    - ./.jshintignore:/var/www/.jshintignore
   links:
     - redis
 redis:

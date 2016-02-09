@@ -4,7 +4,10 @@
   "description": "Docker node boilerplate for Sagacify",
   "main": "index.js",
   "scripts": {
-    "test": "semistandard --verbose | snazzy",
+    "lint": "semistandard --verbose | snazzy",
+    "mocha": "APP_LOG_LEVEL=100 mocha --recursive",
+    "coverage": "APP_LOG_LEVEL=100 mocha --recursive -r jscoverage --covout=html --covinject=true --coverage=90,85,75 test",
+    "test": "npm run lint && npm run mocha",
     "start": "node index.js"
   },
   "repository": {
@@ -21,6 +24,8 @@
     "bluebird": "^2.10.0",
     "bunyan": "^1.5.1",
     "config": "^1.16.0",
+    "jscoverage": "^0.6.0",
+    "mocha": "^2.4.5",
     "redis": "^1.0.0",
     "redis-lock": "^0.1.0",
     "semistandard": "^7.0.2",

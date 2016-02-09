@@ -7,7 +7,7 @@ var pkg = require('../../package');
 var mainLogger = bunyan.createLogger({
   name: pkg.name,
   version: pkg.version,
-  level: config.logLevel,
+  level: process.env.APP_LOG_LEVEL || config.logLevel,
   serializers: {
     error: bunyan.stdSerializers.err
   }

@@ -5,12 +5,12 @@ ENV NODE_TLS_REJECT_UNAUTHORIZED 0
 
 WORKDIR /var/www
 
-COPY ./package.json /var/www/package.json
-RUN npm install
-
 COPY ./src /var/www/src
 COPY ./config /var/www/config
 COPY ./package.json /var/www/package.json
+COPY ./test /var/www/test
 COPY ./index.js /var/www/index.js
+
+RUN npm install
 
 CMD ["npm", "start"]
