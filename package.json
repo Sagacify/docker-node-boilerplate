@@ -7,7 +7,7 @@
     "lint": "semistandard --verbose | snazzy",
     "mocha": "APP_LOG_LEVEL=100 mocha --recursive",
     "coverage": "APP_LOG_LEVEL=100 mocha --recursive -r jscoverage --covout=html --covinject=true --coverage=90,85,75 test",
-    "test": "npm run lint && npm run mocha",
+    "test": "npm run lint && npm run mocha && npm run coverage",
     "start": "node index.js"
   },
   "repository": {
